@@ -2,7 +2,7 @@
 
 import os
 from pathlib import Path
-#import words
+#import Word
 
 
 current_path = os.getcwd()
