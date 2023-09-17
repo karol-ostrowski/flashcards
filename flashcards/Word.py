@@ -25,5 +25,5 @@ class Word():
             print("Type the word in Norwegian:")
             new_word_no = input()
 
-                if 
+                if
                 new_word = Word(new_word_eng, new_word_no)
