@@ -14,3 +14,4 @@ with open(words_folder_path, 'r') as f:
         print(file)
 
 #note to self: czy jak zimportuje obiekt ktory ma zimporotwany modul to on tez bedzie zimportowany
+#asdsdasd
