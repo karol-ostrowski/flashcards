@@ -11,7 +11,6 @@ class Word():
         self.times_answered = 0
         self.times_answered_correctly = 0
         self.id = 1 #needs work
-
     def ListOfWords():
         try:
             listdir = os.listdir()
