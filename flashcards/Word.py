@@ -14,7 +14,8 @@ class Word():
     def ListOfWords():
         try:
             listdir = os.listdir()
-            
+
+"""           
     def AddWord():
         try:
             os.system('cls')
@@ -26,3 +27,4 @@ class Word():
 
                 if
                 new_word = Word(new_word_eng, new_word_no)
+                """
