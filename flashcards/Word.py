@@ -39,18 +39,21 @@ def EditOrRemove():
             while True:
                 os.system('cls')
                 edit_or_remove = input("1 - edit\n2 - remove\n")
-                if edit_or_remove == '1':
+                if edit_or_remove == '1':   #editing
                     os.system('cls')
                     edited_word_in_norwegian = input("new spelling of the word in norwegian:\n")
                     os.system('cls')
                     edited_word_in_english = input("new spelling of the word in english:\n")
-                    df_words.loc[df_words['word in norwegian'] == edit_or_remove, ['word in norwegian', 'word in english']] = [edited_word_in_norwegian, edited_word_in_english]
+                    df_words.loc[df_words[df_words['word in norwegian'] == word_to_edit_or_remove].index, ['word in norwegian', 'word in english']] = edited_word_in_norwegian, edited_word_in_english
+
+                    # df_words[df_words['word in norwegian'] == word_to_edit_or_remove].index -> this code returns the index of a row with a value corresponding to given value, seems like an useful thing
+
                     df_words.to_csv('words.csv', index=False)
                     loopin = 1
                     break
-                elif edit_or_remove == '2':
+                elif edit_or_remove == '2':     #removing
                     os.system('cls')
-                    df_words.drop(df_words[df_words['word in norwegian'] == word_to_edit_or_remove].index) #doesnt delete chosen word, i think this line is a problem
+                    df_words.drop(df_words[df_words['word in norwegian'] == word_to_edit_or_remove].index, inplace=True) #doesnt delete chosen word, i think this line is a problem
                     df_words.to_csv('words.csv', index=False)
                     input(f"removed {word_to_edit_or_remove}, press enter to continue...")
                     loopin = 1
